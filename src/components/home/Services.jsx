@@ -3,6 +3,7 @@ import React from 'react';
 import iconPulse from '../../assets/pulse.png';
 import iconNexus from '../../assets/nexus.png';
 import iconHorizon from '../../assets/horizon.png';
+import { Link } from 'react-router-dom';
 
 const ServicesSection = () => {
   return (
@@ -57,9 +58,12 @@ const ServicesSection = () => {
               <p className="text-[#94A3B8] text-sm leading-relaxed mb-8 max-w-[280px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet ornare dolor.
               </p>
-              <a href="#" className="text-[#EC4899] text-sm underline underline-offset-4 hover:text-white transition-colors">
+             <Link 
+                to="/pulse" 
+                className="text-[#EC4899] text-sm underline underline-offset-4 hover:text-white transition-colors"
+              >
                 Discover Automation
-              </a>
+              </Link>
             </div>
 
             {/* Service 2: Nexus */}

@@ -7,6 +7,7 @@ import imgJourney from '../../assets/journey.png';
 import imgCaseStudies from '../../assets/casestudy.png';
 import imgTestimonials from '../../assets/testimonials.png';
 import integrationLogos from '../../assets/integrations-logos.png';
+import IntegrationCard from '../home/IntegrationCard';
 
 const CompanySections = () => {
   
@@ -94,31 +95,7 @@ const CompanySections = () => {
       {/* =========================================================
           PART 2: BOTTOM BANNER (All-in-One Team)
       ========================================================== */}
-      <div className="container mx-auto max-w-6xl px-6 pb-24">
-        <div className="w-full rounded-[32px] overflow-hidden flex flex-col md:flex-row shadow-2xl">
-          
-          {/* Left Side: Purple Gradient */}
-          <div className="w-full md:w-1/2 bg-gradient-to-br from-[#4338ca] to-[#7c3aed] p-10 md:p-14 flex flex-col justify-center">
-            <h3 className="text-white text-3xl md:text-4xl font-normal mb-6 leading-tight">
-              All-in-One AI Team for <br /> Your Business
-            </h3>
-            <p className="text-purple-100 text-sm md:text-base leading-relaxed max-w-sm">
-              We've got every role covered - from social media and customer service to copywriting, email marketing.
-            </p>
-          </div>
-
-          {/* Right Side: Logos Grid */}
-          <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8 md:p-0">
-             {/* Use the exported image here to ensure pixel-perfect layout of logos */}
-            <img 
-              src={integrationLogos} 
-              alt="Integration Partners" 
-              className="max-w-[85%] h-auto object-contain"
-            />
-          </div>
-
-        </div>
-      </div>
+     <IntegrationCard/>
 
     </div>
   );

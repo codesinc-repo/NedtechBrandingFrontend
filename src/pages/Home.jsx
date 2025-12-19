@@ -14,7 +14,7 @@ export default function Home() {
   return (
     // Pass 'activePage' to Layout/Navbar so the "About us" link gets the purple underline
     <>
-    <Layout> <HeroSection
+    <HeroSection
   align="left"
   title={<>Grow Smarter,<br />Work Faster,<br />Spend Less.</>}
   primaryBtnText="Start your free trial"
@@ -29,7 +29,7 @@ export default function Home() {
       </button>
     </div>
   }
-/></Layout>
+/>
     <ServicesSection/>
     <PricingSection/>
     <ProcessSection/>

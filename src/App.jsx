@@ -1,20 +1,33 @@
-import Footer from "./layouts/Footer";
-import Navbar from "./layouts/Navbar";
-import ProcessSection from "./components/home/Process";
-import PricingSection from "./components/home/PricingSection";
-import ServicesSection from "./components/home/Services";
-import Layout from "./layouts/TopLayout";
-import HeroSection from "./components/home/Hero";
-import FounderAndMission from "./components/about/FounderStory";
-import CompanySections from "./components/about/CompanySections";
-import ContactUs from "./pages/Contact";
-import Home from "./pages/Home";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'; // Router ya BrowserRouter import mat karein
+import Layout from './layouts/TopLayout';
+import Home from './pages/Home';
+import AboutUsPage from './pages/About';
+import ContactUs from './pages/Contact'
+import Services from './pages/Services';
+import PulsePage from './pages/Pulse';
+import FeaturesPage from './pages/Features';
+import FoundingPage from './pages/Found50';
+// Other imports...
 
-export default function App() {
+function App() {
   return (
-    <>
-    <Home/>
-   
-    </>
+      <Layout> 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUsPage/>}/>
+          <Route path="/contact" element={<ContactUs/>}/>
+          <Route path="/services" element={<Services/>}/>
+          <Route path="/pulse" element={<PulsePage/>} />
+          <Route path="/features" element={<FeaturesPage/>} />
+           <Route path="/found50" element={<FoundingPage/>} />
+           
+       
+       
+        </Routes>
+      </Layout>
+    // </Router> closing tag bhi hata dein
   );
 }
+
+export default App;

@@ -14,7 +14,7 @@ export default function AboutUsPage() {
   return (
     // Pass 'activePage' to Layout/Navbar so the "About us" link gets the purple underline
     <>
-    <Layout activePage="About us"> 
+    
       
       <HeroSection
         align="left"
@@ -29,9 +29,10 @@ export default function AboutUsPage() {
         // This tells the component to let the Wave background take over the right side.
       />
 
-    </Layout>
-    <ServicesSection/>
-    <PricingSection/>
+    
+    <FounderAndMission/>
+    <CompanySections/>
+     <ProcessSection/>
     <FAQ/>
     <Footer/>
     </>
