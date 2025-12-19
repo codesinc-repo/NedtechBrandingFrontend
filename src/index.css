@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    /* This makes the whole page the dark navy color from Figma */
+    background-color: #020617; 
+    color: #ffffff;
+  }
+}
