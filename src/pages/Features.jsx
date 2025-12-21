@@ -3,7 +3,7 @@ import HeroSection from "../components/home/Hero"; // Or wherever your HeroSecti
 import IntegrationCard from '../components/home/IntegrationCard';
 import ProcessSection from '../components/home/Process';
 import FAQ from '../components/home/Faq';
-import Footer from '../layouts/Footer';
+ 
 import FeaturesCarousel from '../components/features/FeaturesCarousel';
 
 export default function FeaturesPage() {
@@ -34,7 +34,7 @@ export default function FeaturesPage() {
       <IntegrationCard/>
       <ProcessSection/>
       <FAQ/>
-      <Footer/>
+       
 
 
     </>

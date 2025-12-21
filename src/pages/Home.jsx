@@ -5,7 +5,7 @@ import FounderAndMission from '../components/about/FounderStory';
 import CompanySections from '../components/about/CompanySections';
 import ProcessSection from '../components/home/Process';
 import FAQ from '../components/home/Faq';
-import Footer from '../layouts/Footer';
+ 
 import ServicesSection from '../components/home/Services';
 import PricingSection from '../components/home/PricingSection';
 
@@ -34,7 +34,7 @@ export default function Home() {
     <PricingSection/>
     <ProcessSection/>
     <FAQ/>
-    <Footer/>
+     
     </>
   );
 }

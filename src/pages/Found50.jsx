@@ -5,7 +5,7 @@ import FoundingFormSection from '../components/found50/FoundForm';
 import AboutSpotlight from '../components/found50/AboutSpot';
 import ProcessSection from '../components/home/Process';
 import FAQ from '../components/home/Faq';
-import Footer from '../layouts/Footer';
+ 
 
 export default function FoundingPage() {
   return (
@@ -34,7 +34,7 @@ export default function FoundingPage() {
     <AboutSpotlight/>
     <ProcessSection/>
     <FAQ/>
-    <Footer/>
+     
     </>
   );
 }

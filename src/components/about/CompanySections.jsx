@@ -21,30 +21,7 @@ const CompanySections = () => {
       image: imgTeam,
       layout: "text-left", // Text on Left, Image on Right
     },
-    {
-      id: 2,
-      title: "Our Journey",
-      text: "Discover how we started, grew, and continue to make an impact.",
-      btnText: "Discover more",
-      image: imgJourney,
-      layout: "image-left", // Image on Left, Text on Right
-    },
-    {
-      id: 3,
-      title: "Case Studies",
-      text: "Explore our projects and see the results we've achieved for our clients.",
-      btnText: "Explore more",
-      image: imgCaseStudies,
-      layout: "text-left",
-    },
-    {
-      id: 4,
-      title: "Testimonials",
-      text: "See what our customers are saying about their experiences with us.",
-      btnText: "Read our testimonials",
-      image: imgTestimonials,
-      layout: "image-left",
-    },
+   
   ];
 
   return (

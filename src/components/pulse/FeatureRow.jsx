@@ -20,9 +20,7 @@ const FeatureRow = ({
         ${imageOnLeft ? 'md:flex-row-reverse' : ''} 
       `}>
         
-        {/* --- TEXT SECTION (Increased Width) --- 
-           Changed from md:w-1/2 (50%) to md:w-[60%] (3/5)
-        */}
+        {/* --- TEXT SECTION (Kept exactly 60% as per your design) --- */}
         <div className="w-full md:w-[60%] flex flex-col justify-center">
           
           <h2 className="text-3xl md:text-5xl font-normal text-white mb-6 leading-tight">
@@ -56,17 +54,20 @@ const FeatureRow = ({
           )}
         </div>
 
-        {/* --- IMAGE SECTION (Decreased Width) --- 
-           Changed from md:w-1/2 (50%) to md:w-[40%] (2/5)
-        */}
+        {/* --- IMAGE SECTION (Kept exactly 40% as per your design) --- */}
         <div className="w-full md:w-[40%] flex justify-center relative">
           
-          {/* Added 'max-w-md' to force the image to stay compact even on larger screens */}
-          <img 
-            src={imageSrc} 
-            alt={imageAlt || title} 
-            className="w-full max-w-sm md:max-w-md h-auto object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]" 
-          />
+          {/* LOGIC ADDED: Wrapped img in Link. 
+              Added 'cursor-pointer' to the image class so it feels clickable. 
+          */}
+          <Link to={linkUrl} className="contents">
+            <img 
+              src={imageSrc} 
+              alt={imageAlt || title} 
+              className="w-full max-w-sm md:max-w-md h-auto object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02] cursor-pointer" 
+            />
+          </Link>
+
         </div>
 
       </div>

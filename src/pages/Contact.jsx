@@ -3,8 +3,9 @@ import Layout from "../layouts/TopLayout";
 import PageHero from "../components/contact/PageHero"; 
 import ContactFormSection from "../components/contact/ContactForm";
 import ProcessSection from '../components/home/Process';
-import Footer from '../layouts/Footer';
+ 
 import IntegrationCard from '../components/home/IntegrationCard';
+import FAQ from '../components/home/Faq'
 
 
 export default function Contact() {
@@ -22,8 +23,9 @@ export default function Contact() {
       <ContactFormSection />
       <IntegrationCard/>
       <ProcessSection/>
+      <FAQ/>
       
-      <Footer/>
+       
 </>
    
   );

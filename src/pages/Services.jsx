@@ -6,7 +6,8 @@ import PricingSection from '../components/home/PricingSection';
 import IntegrationCard from '../components/home/IntegrationCard';
 import ProcessSection from '../components/home/Process';
 import FAQ from '../components/home/Faq';
-import Footer from '../layouts/Footer';
+ 
+import ProductDash from '../components/features/ProductsDash'
 export default function Services() {
   return (
     // Note: Layout is handled globally in App.jsx now, so we don't wrap it here
@@ -23,11 +24,11 @@ export default function Services() {
         onButtonClick={() => console.log("Navigate to signup")} 
       />
       <ServicesSection/>
-      <CoreFeaturesSection/>
+      <ProductDash/>
       <PricingSection theme="light" />
       <ProcessSection/>
       <FAQ/>
-      <Footer/>
+       
    
       
       {/* Rest of your page content */}

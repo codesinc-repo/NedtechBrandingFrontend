@@ -1,5 +1,17 @@
 import React from 'react';
+const ChatIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-16 h-16 mx-auto text-white">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm3.75 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm3.75 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+  </svg>
+);
 
+// SVG Icon for Email (Envelope)
+const EmailIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-16 h-16 mx-auto text-white">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+  </svg>
+);
 const ContactFormSection = () => {
   return (
     // Section background is Light Gray (Bottom half of the split)
@@ -13,29 +25,41 @@ const ContactFormSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           
           {/* Card 1: Chat to NedBot */}
-          <div className="bg-[#5d44ce] rounded-3xl p-10 text-center text-white shadow-xl hover:transform hover:-translate-y-1 transition duration-300">
-            <h3 className="text-2xl font-semibold mb-4">Chat to NedBot</h3>
+          {/* Updated: Replaced solid bg with gradient bg-gradient-to-b from-[#6a52e3] to-[#2a1e75] */}
+          <div className="bg-gradient-to-b from-[#6a52e3] to-[#2a1e75] rounded-3xl p-10 text-center text-white shadow-xl hover:transform hover:-translate-y-1 transition duration-300">
             
-            {/* Added px-8 to squeeze text in the middle */}
-            <p className="text-white/80 mb-8 leading-relaxed px-4 md:px-8">
+            {/* Added Chat Icon with margin bottom */}
+            <div className="mb-6">
+              <ChatIcon />
+            </div>
+
+            <h3 className="text-3xl font-semibold mb-4">Chat to HelmBot</h3>
+            
+            <p className="text-white/80 mb-10 leading-relaxed px-4 md:px-12 text-lg">
               Chat with our customer service bot for instant support and guidance.
             </p>
             
-            <button className="text-white underline decoration-1 underline-offset-4 hover:text-gray-200 font-medium">
+            <button className="text-white underline decoration-1 underline-offset-4 hover:text-gray-200 font-medium text-lg">
               Start Chat
             </button>
           </div>
 
           {/* Card 2: Email Us */}
-          <div className="bg-[#5d44ce] rounded-3xl p-10 text-center text-white shadow-xl hover:transform hover:-translate-y-1 transition duration-300">
-            <h3 className="text-2xl font-semibold mb-4">Email Us</h3>
+          {/* Updated: Replaced solid bg with gradient bg-gradient-to-b from-[#6a52e3] to-[#2a1e75] */}
+          <div className="bg-gradient-to-b from-[#6a52e3] to-[#2a1e75] rounded-3xl p-10 text-center text-white shadow-xl hover:transform hover:-translate-y-1 transition duration-300">
             
-            {/* Added px-8 here as well */}
-            <p className="text-white/80 mb-8 leading-relaxed px-4 md:px-8">
+            {/* Added Email Icon with margin bottom */}
+            <div className="mb-6">
+               <EmailIcon />
+            </div>
+
+            <h3 className="text-3xl font-semibold mb-4">Email Us</h3>
+            
+            <p className="text-white/80 mb-10 leading-relaxed px-4 md:px-12 text-lg">
               Send us your queries anytime and our team will get back to you.
             </p>
             
-            <a href="mailto:info@nedtech.ai" className="text-white underline decoration-1 underline-offset-4 hover:text-gray-200 font-medium">
+            <a href="mailto:info@nedtech.ai" className="text-white underline decoration-1 underline-offset-4 hover:text-gray-200 font-medium text-lg">
               info@nedtech.ai
             </a>
           </div>

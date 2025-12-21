@@ -2,7 +2,7 @@ import React from 'react';
 // If you have the top-right wave graphic exported, import it here.
 // import WaveGraphic from '../../assets/top-right-wave.png'; 
 
-const StatsSection = () => {
+const   StatsSection = () => {
   return (
     <div className="w-full flex flex-col">
 
