@@ -1,6 +1,7 @@
 import React from 'react';
 // IMPORTANT: Export the team meeting image from Figma and save it as about-banner.jpg
 import AboutImage from '../../assets/about-banner.png'; 
+import { Link } from 'react-router-dom';
 
 const AboutSpotlight = () => {
   return (
@@ -22,9 +23,11 @@ const AboutSpotlight = () => {
           </p>
           
           <div>
-            <button className="bg-white text-[#5B21B6] px-10 py-3 rounded-full font-medium text-lg hover:bg-gray-100 transition-colors shadow-lg">
-              Find out more
-            </button>
+            <Link to="/meet">
+              <button className="bg-white text-[#5B21B6] px-10 py-3 rounded-full font-medium text-lg hover:bg-gray-100 transition-colors shadow-lg">
+                Find out more
+              </button>
+            </Link>
           </div>
           
         </div>

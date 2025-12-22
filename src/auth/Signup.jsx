@@ -97,9 +97,11 @@ const Signup = () => {
               </div>
 
               {/* Submit Button */}
-              <button className="w-full bg-white text-[#0F172A] font-bold py-3 rounded-lg hover:bg-gray-100 transition-all shadow-lg mt-4 text-sm">
-                Create account
-              </button>
+              <Link to="/freetrial">
+                <button className="w-full bg-white text-[#0F172A] font-bold py-3 rounded-lg hover:bg-gray-100 transition-all shadow-lg mt-4 text-sm">
+                  Create account
+                </button>
+              </Link>
 
               {/* Footer Link */}
               <div className="text-center mt-2">

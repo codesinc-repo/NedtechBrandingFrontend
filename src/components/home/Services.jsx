@@ -23,9 +23,11 @@ const ServicesSection = () => {
               technical expertise, and a human understanding of what makes small 
               businesses thrive.
             </p>
-            <button className="px-8 py-3 rounded-full border border-[#94A3B8] text-[#0F172A] font-medium text-sm hover:bg-[#0F172A] hover:text-white transition-colors duration-300">
-              Find out more
-            </button>
+            <Link to="meet">
+              <button className="px-8 py-3 rounded-full border border-[#94A3B8] text-[#0F172A] font-medium text-sm hover:bg-[#0F172A] hover:text-white transition-colors duration-300">
+                Find out more
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -41,9 +43,11 @@ const ServicesSection = () => {
             <h2 className="text-white text-3xl md:text-5xl font-normal">
               Explore our services.
             </h2>
-            <button className="px-8 py-3 rounded-full border border-[#334155] text-white font-medium text-sm hover:bg-white hover:text-[#020617] transition-colors duration-300">
-              Explore all services
-            </button>
+            <Link to="/services">
+              <button className="px-8 py-3 rounded-full border border-[#334155] text-white font-medium text-sm hover:bg-white hover:text-[#020617] transition-colors duration-300">
+                Explore all services
+              </button>
+            </Link>
           </div>
 
           {/* Services Grid */}

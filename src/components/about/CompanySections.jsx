@@ -8,6 +8,7 @@ import imgCaseStudies from '../../assets/casestudy.png';
 import imgTestimonials from '../../assets/testimonials.png';
 import integrationLogos from '../../assets/integrations-logos.png';
 import IntegrationCard from '../home/IntegrationCard';
+import { Link } from 'react-router-dom';
 
 const CompanySections = () => {
   
@@ -59,9 +60,11 @@ const CompanySections = () => {
               <p className="text-[#475569] text-lg font-light leading-relaxed mb-10 max-w-md">
                 {section.text}
               </p>
+              <Link to="/meet">
               <button className="px-8 py-2.5 rounded-full border border-[#94A3B8] text-[#0F172A] font-medium text-sm hover:bg-[#0F172A] hover:text-white transition-colors duration-300">
                 {section.btnText}
               </button>
+            </Link>
             </div>
 
           </div>

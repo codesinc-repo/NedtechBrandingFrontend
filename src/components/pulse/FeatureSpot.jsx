@@ -1,6 +1,7 @@
 import React from 'react';
 // IMPORTANT: Export your pricing image from Figma and import it here
 import PricingImage from '../../assets/pulse-hero.png'; 
+import { Link } from 'react-router-dom';
 
 const FeatureSpotlight = () => {
   return (
@@ -22,9 +23,11 @@ const FeatureSpotlight = () => {
           </p>
           
           <div>
-            <button className="bg-white text-[#4c1d95] px-10 py-3 rounded-full font-medium text-lg hover:bg-gray-100 transition-colors shadow-lg">
-              Find out more
-            </button>
+            <Link to="/meet">
+              <button className="bg-white text-[#4c1d95] px-10 py-3 rounded-full font-medium text-lg hover:bg-gray-100 transition-colors shadow-lg">
+                Find out more
+              </button>
+            </Link>
           </div>
           
         </div>

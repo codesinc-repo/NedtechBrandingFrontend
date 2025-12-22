@@ -40,6 +40,8 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/product" element={<Services />} />
+        <Route path="/services" element={<Services />} />
+
       <Route 
           path="/product/flux" 
           element={<ServiceTemplate serviceKey="flux" />} 
@@ -69,6 +71,9 @@ function App() {
           element={<ServiceTemplate serviceKey="signal" />} 
         />
         <Route path="/product/pulse" element={<PulsePage />} />
+        <Route path="/product/pulse/meet" element={<MeetTeam />} />
+        <Route path="/product/meet" element={<MeetTeam />} />
+
        
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/found50" element={<FoundingPage />} />

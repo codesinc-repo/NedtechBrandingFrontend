@@ -1,5 +1,6 @@
 import React from 'react';
 import WaveBg from '../../assets/wave-bg.png'; 
+import { Link } from 'react-router-dom';
 
 const HeroSection = ({
   title,
@@ -35,9 +36,11 @@ const HeroSection = ({
           {(primaryBtnText || secondaryBtnText) && (
             <div className="flex flex-wrap gap-4">
               {primaryBtnText && (
-                <button className="bg-[#7B5eea] hover:bg-[#6a4ed0] text-white px-8 py-3.5 rounded-full font-medium transition shadow-lg shadow-purple-900/40">
-                  {primaryBtnText}
-                </button>
+                <Link to="/signup">
+                  <button className="bg-[#7B5eea] hover:bg-[#6a4ed0] text-white px-8 py-3.5 rounded-full font-medium transition shadow-lg shadow-purple-900/40">
+                    {primaryBtnText}
+                  </button>
+                </Link>
               )}
               {secondaryBtnText && (
                 <button className="border border-gray-600 text-white px-8 py-3.5 rounded-full font-medium hover:border-[#7B5eea] hover:bg-white/5 transition">

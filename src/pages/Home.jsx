@@ -8,6 +8,7 @@ import FAQ from '../components/home/Faq';
  
 import ServicesSection from '../components/home/Services';
 import PricingSection from '../components/home/PricingSection';
+import { Link } from 'react-router-dom';
 
 
 export default function Home() {
@@ -24,9 +25,11 @@ export default function Home() {
       <h3 className="text-2xl font-semibold text-white mb-8">
         Join 50 founders shaping the future of work.
       </h3>
-      <button className="w-full py-3 rounded-full border border-[#7B5eea] text-white hover:bg-[#7B5eea]/10 transition">
-        Apply to Join the Founding 50
-      </button>
+      <Link to="/found50">
+        <button className="w-full py-3 rounded-full border border-[#7B5eea] text-white hover:bg-[#7B5eea]/10 transition">
+          Apply to Join the Founding 50
+        </button>
+      </Link>
     </div>
   }
 />

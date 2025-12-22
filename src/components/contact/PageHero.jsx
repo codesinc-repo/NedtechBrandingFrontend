@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PageHero = ({ title, subtitle, buttonText, onButtonClick }) => {
   return (
@@ -20,12 +21,12 @@ const PageHero = ({ title, subtitle, buttonText, onButtonClick }) => {
         {/* Button Logic: Renders ONLY if buttonText is provided */}
         {buttonText && (
           <div className="flex justify-center mt-8">
-            <button 
-              onClick={onButtonClick}
-              className="px-8 py-3 rounded-full bg-[#7B5eea] text-white font-semibold hover:bg-[#6a4ce0] transition-all shadow-[0_0_20px_rgba(123,94,234,0.3)]"
-            >
-              {buttonText}
-            </button>
+            <Link to="/signup">
+              <button className="px-8 py-3 rounded-full bg-[#7B5eea] text-white font-semibold hover:bg-[#6a4ce0] transition-all shadow-[0_0_20px_rgba(123,94,234,0.3)]">
+                {buttonText}
+              </button>
+            </Link>
+            
           </div>
         )}
         

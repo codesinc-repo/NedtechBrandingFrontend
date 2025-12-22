@@ -1,7 +1,7 @@
 import React from 'react';
 // Import the asset you exported
 import cardWaveGraphic from '../../assets/card-wave.png'; 
-
+import { Link } from 'react-router-dom';
 const ProcessSection = () => {
   return (
     <section className="w-full bg-[#EFEEF6] py-24 px-4 overflow-hidden">
@@ -70,9 +70,12 @@ const ProcessSection = () => {
 
         {/* --- CTA BUTTON --- */}
         <div className="mt-20">
-          <button className="px-8 py-3 rounded-full border border-slate-800 text-[#0F172A] font-medium text-sm hover:bg-slate-200 transition-colors">
-            Find out more
-          </button>
+          <Link to="/meet">
+            <button className="px-8 py-3 rounded-full border border-slate-800 text-[#0F172A] font-medium text-sm hover:bg-slate-200 transition-colors">
+              Find out more
+            </button>
+          </Link>
+          
         </div>
 
       </div>

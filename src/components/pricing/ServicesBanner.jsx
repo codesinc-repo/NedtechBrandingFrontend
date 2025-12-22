@@ -4,6 +4,7 @@ import React from 'react';
 import iconPulse from '../../assets/pulse.png';
 import iconVector from '../../assets/management.png';
 import iconHorizon from '../../assets/drift2.png';
+import { Link } from 'react-router-dom';
 
 const ServicesBanner = () => {
   return (
@@ -27,10 +28,11 @@ const ServicesBanner = () => {
                 Choose the plan that fits your business best, select a set of 
                 bespoke services to benefit you and your business.
               </p>
-              
-              <button className="px-8 py-3 bg-white text-[#5540C7] rounded-full font-medium text-sm hover:bg-gray-100 transition-colors shadow-lg">
-                Find out more
-              </button>
+              <Link to="/product/pulse">
+                <button className="px-8 py-3 bg-white text-[#5540C7] rounded-full font-medium text-sm hover:bg-gray-100 transition-colors shadow-lg">
+                  Find out more
+                </button>
+              </Link>
             </div>
           </div>
 

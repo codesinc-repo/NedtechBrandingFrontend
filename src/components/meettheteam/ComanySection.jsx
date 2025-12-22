@@ -3,6 +3,7 @@ import React from 'react';
 // --- IMPORT ASSETS ---
 import founderPhoto from '../../assets/meet-card.png'; 
 import helmCardDark from '../../assets/helm-dark.png';
+import { Link } from 'react-router-dom';
 
 const FoundingMembers = () => {
   
@@ -16,7 +17,7 @@ const FoundingMembers = () => {
       layout: "text-left", // Text Left, Image Right
     },
     {
-      id: 2,
+      id: 2,  
       name: "Name Name",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       image: founderPhoto,
@@ -98,10 +99,11 @@ const FoundingMembers = () => {
             <p className="text-[#64748B] text-sm leading-relaxed mb-8 font-light max-w-sm">
               Our 50 founders shaping the future of work. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            
-            <button className="px-8 py-3 rounded-full bg-[#7C3AED] text-white font-medium text-sm hover:bg-[#6D28D9] transition-all shadow-lg shadow-purple-500/30">
-              Find out more
-            </button>
+            <Link to="/found50">
+              <button className="px-8 py-3 rounded-full bg-[#7C3AED] text-white font-medium text-sm hover:bg-[#6D28D9] transition-all shadow-lg shadow-purple-500/30">
+                Find out more
+              </button>
+            </Link>
           </div>
 
         </div>

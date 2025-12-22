@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import footerWaveGraphic from '../assets/footer-wave.png'; // Make sure this path is correct
+import { Link } from 'react-router-dom';
 
 const Footer = ({ withCTA = true }) => {
   
@@ -40,9 +41,11 @@ const Footer = ({ withCTA = true }) => {
             <p className="text-purple-100 text-lg max-w-xl mb-10 leading-relaxed">
               Everything you need to accept card payments and grow your business anywhere on the planet.
             </p>
-            <button className="bg-white text-[#4F46E5] px-8 py-3.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-lg">
-              Start your free trial
-            </button>
+            <Link to="/signup">
+              <button className="bg-white text-[#4F46E5] px-8 py-3.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-lg">
+                Start your free trial
+              </button>
+            </Link>
           </div>
         </div>
       )}
