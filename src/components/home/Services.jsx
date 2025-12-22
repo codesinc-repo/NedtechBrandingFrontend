@@ -59,7 +59,7 @@ const ServicesSection = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet ornare dolor.
               </p>
              <Link 
-                to="/pulse" 
+                to="/product/pulse" 
                 className="text-[#EC4899] text-sm underline underline-offset-4 hover:text-white transition-colors"
               >
                 Discover Automation

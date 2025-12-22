@@ -17,7 +17,7 @@ import Pricing from './pages/Pricing';
 import Login from './auth/Login';
 import Signup from './auth/Signup';
 import PlanSelection from './components/pricing/PlanSelection';
-import Flux from './pages/Flux';
+import ServiceTemplate from './pages/Flux';
 import Resources from './pages/Resources';
 import ScrollToTop from './components/ScrollToTop';
 import PaymentPage from './pages/Payment';
@@ -40,16 +40,36 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/product" element={<Services />} />
-        <Route path="/product/flux" element={<Flux/>} />
-         <Route path="/product/signal" element={<Flux/>} />
+      <Route 
+          path="/product/flux" 
+          element={<ServiceTemplate serviceKey="flux" />} 
+        />
 
-          <Route path="/product/drift" element={<Flux/>} />
-           <Route path="/product/summit" element={<Flux/>} />
-            <Route path="/product/automation" element={<Flux/>} />
+        {/* Drift Route */}
+        <Route 
+          path="/product/drift" 
+          element={<ServiceTemplate serviceKey="drift" />} 
+        />
+
+        {/* Summit Route */}
+        <Route 
+          path="/product/summit" 
+          element={<ServiceTemplate serviceKey="summit" />} 
+        />
+
+        {/* Atlas Route */}
+        <Route 
+          path="/product/atlas" 
+          element={<ServiceTemplate serviceKey="atlas" />} 
+        />
+
+        {/* Signal Route */}
+        <Route 
+          path="/product/signal" 
+          element={<ServiceTemplate serviceKey="signal" />} 
+        />
         <Route path="/product/pulse" element={<PulsePage />} />
-        <Route path="/product/pulse" element={<PulsePage />} />
-        <Route path="/product/pulse" element={<PulsePage />} />
-        <Route path="/product/pulse" element={<PulsePage />} />
+       
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/found50" element={<FoundingPage />} />
         <Route path="/pricing" element={<Pricing />} />

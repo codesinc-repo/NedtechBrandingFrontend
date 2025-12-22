@@ -1,43 +1,48 @@
-import React from 'react'
-import HeroSection from '../components/home/Hero'
-import ServiceFeature from '../components/flux/FluxFeature'
-import iconFlux from '../assets/flux.png'
-import FeatureSpotlight from '../components/pulse/FeatureSpot'
-import PulseRelatedServices from '../components/flux/FluxService'
-import ProcessSection from '../components/home/Process'
+import React from 'react';
+import HeroSection from '../components/home/Hero';
+import ServiceFeature from '../components/flux/FluxFeature'; // Ensure this matches your ServiceFeature component
+import FeatureSpotlight from '../components/pulse/FeatureSpot';
+import PulseRelatedServices from '../components/flux/FluxService';
+import ProcessSection from '../components/home/Process';
 
+// Import the data
+import { servicesData } from '../helpers/serviceData';
 
-const Flux = () => {
+const ServiceTemplate = ({ serviceKey }) => {
+  
+  // 1. Get the specific data based on the key passed (e.g., 'flux', 'drift')
+  const content = servicesData[serviceKey];
+
+  // Safety check: Agar galat key pass hui to crash na ho
+  if (!content) {
+    return <div className="text-white text-center py-20">Service not found</div>;
+  }
+
   return (
     <>
-    <HeroSection 
-        title="Flux (Social media)"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ma. Lorem ipsum dolor sit amet, consectetur adipiscing."
+      <HeroSection 
+        title={content.title}
+        subtitle={content.heroSubtitle}
         primaryBtnText="Start your free trial"
         align="left"
-        // rightContent and secondaryBtnText are omitted as they are not in the design
       />
-        <ServiceFeature 
-        icon={iconFlux}
-        serviceName="Flux"
-        accentColor="#EC4899" 
-        headline="Your always-on creative engine."
-        description="Flux designs, schedules, and posts content that grows your audience and keeps your brand active across social channels, without the grind."
-        corePromise="Grow your presence without spending your life on content."
-        features={[
-          "Social content creation",
-          "Trend and hashtag suggestions",
-          "Auto-scheduling",
-          "Insights lite",
-          "Multi-platform posting"
-        ]}
+      
+      {/* 2. Pass dynamic data to ServiceFeature */}
+      <ServiceFeature 
+        icon={content.icon}
+        serviceName={content.name}
+        accentColor={content.accentColor}
+        headline={content.headline}
+        description={content.description}
+        corePromise={content.corePromise}
+        features={content.features}
       />
+
       <FeatureSpotlight/>
       <PulseRelatedServices/>
       <ProcessSection/>
-      
     </>
-  )
-}
+  );
+};
 
-export default Flux
+export default ServiceTemplate;
