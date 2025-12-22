@@ -77,6 +77,7 @@ function App() {
        
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/found50" element={<FoundingPage />} />
+          <Route path="/founding-50" element={<FoundingPage />} />
         <Route path="/pricing" element={<Pricing />} />
        
         <Route path="/meet" element={<MeetTeam />} />

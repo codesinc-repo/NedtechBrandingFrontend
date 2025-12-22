@@ -1,24 +1,25 @@
+// src/components/pricing/PlanSelection.jsx
 import React, { useState } from 'react';
 
 // --- IMPORT ASSETS ---
 import iconPulse from '../../assets/pulse.png';
-import iconVector from '../../assets/management.png';
+import iconVector from '../../assets/management.png'; // Assuming this is Nexus/Vector
 import iconHorizon from '../../assets/drift2.png';
 
-// --- IMPORT THE NEXT SCREEN ---
-import SelectedPlan from './SelectedPlan'; // Make sure the path is correct
+// --- IMPORT THE CHILD COMPONENT ---
+import SelectedPlan from './SelectedPlan'; 
 
 const PlanSelection = () => {
   // State to track which plan is selected
   // null = show list, object = show details
   const [selectedPlan, setSelectedPlan] = useState(null);
 
-  // Data for the plans (Moved here so we can map them easily)
+  // Data for the plans
   const plans = [
     {
       id: 'pulse',
       name: 'Pulse',
-      price: '£XXX',
+      price: '£XXX', // You can change this to a number like 500 for calculation logic
       desc: 'Automating the busywork.',
       icon: iconPulse,
       color: 'border-[#EC4899]', // Pink
@@ -41,31 +42,19 @@ const PlanSelection = () => {
     },
   ];
 
-  // --- LOGIC: IF A PLAN IS SELECTED, SHOW THE NEXT SCREEN ---
+  // --- LOGIC: IF A PLAN IS SELECTED, SHOW THE DETAILS SCREEN ---
   if (selectedPlan) {
-    // We pass the selected data and a "Back" function to the child
     return (
-      <div>
-        {/* Optional: A simple Back button to return to the grid */}
-        <div className="container mx-auto max-w-6xl px-6 pt-28">
-           <button 
-             onClick={() => setSelectedPlan(null)}
-             className="text-gray-400 hover:text-white flex items-center gap-2 mb-4"
-           >
-             ← Back to plans
-           </button>
-        </div>
-        
-        {/* Render the SelectedPlan Component */}
-        {/* You can pass selectedPlan as a prop here later to make it dynamic */}
-        <SelectedPlan /> 
-      </div>
+      <SelectedPlan 
+        plan={selectedPlan} 
+        onBack={() => setSelectedPlan(null)} 
+      />
     );
   }
 
   // --- LOGIC: IF NO PLAN SELECTED, SHOW THE GRID ---
   return (
-    <section className="w-full bg-[#020617] py-24 px-6 md:px-12 mt-10">
+    <section className="w-full bg-[#020617] py-24 px-6 md:px-12 mt-10 min-h-screen flex flex-col justify-center">
       <div className="container mx-auto max-w-6xl">
         
         {/* --- HEADER --- */}
@@ -84,7 +73,7 @@ const PlanSelection = () => {
           {plans.map((plan) => (
             <div 
               key={plan.id}
-              // CLICK HANDLER: This sets the state and triggers the view switch
+              // CLICK HANDLER: Sets the plan and switches view
               onClick={() => setSelectedPlan(plan)}
               className={`
                 rounded-3xl border ${plan.color} p-8 md:p-10 flex flex-col 

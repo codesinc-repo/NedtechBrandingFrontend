@@ -15,10 +15,10 @@ import imgPulse from '../assets/pulse.png';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
-  const [hoveredProduct, setHoveredProduct] = useState('Pulse');
+  // Removed hoveredProduct state as it is no longer needed
   const location = useLocation();
 
-  // --- NAVIGATION CONFIGURATION (Links Added) ---
+  // --- NAVIGATION CONFIGURATION ---
   const navLinks = [
     { 
       name: 'Product', 
@@ -31,14 +31,7 @@ const Navbar = () => {
           icon: imgPulse, 
           badge: null,
           description: "Automating the busywork.",
-          models: [
-            // ADDED PATHS HERE
-            { name: 'Flux', icon: imgFlux, desc: 'Social media', path: '/product/flux' },
-            { name: 'Drift', icon: imgDrift, desc: 'Email marketing', path: '/product/drift' },
-            { name: 'Summit', icon: imgSummit, desc: 'Customer success', path: '/product/summit' },
-            { name: 'Atlas', icon: imgAtlas, desc: 'Virtual assistant', path: '/product/atlas' },
-            { name: 'Signal', icon: imgSignal, desc: 'Copywriting', path: '/product/signal' },
-          ]
+          models: [] // CLEARED: No sub-models needed
         },
         { 
           name: 'Nexus', 
@@ -91,7 +84,6 @@ const Navbar = () => {
                       ${isActive ? 'text-white' : 'text-slate-300 hover:text-white'}
                       ${link.className || ''}
                     `}
-                    onMouseEnter={() => isDropdown && setHoveredProduct('Pulse')}
                   >
                     {link.name}
                     {isDropdown && (
@@ -99,25 +91,21 @@ const Navbar = () => {
                     )}
                   </Link>
 
-                  {/* MEGA MENU */}
+                  {/* MEGA MENU (SIMPLIFIED) */}
                   {isDropdown && (
-                    <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-[600px]">
+                    /* CHANGED WIDTH: from w-[600px] to w-72 (Single Column) */
+                    <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-72">
                       
-                      <div className="bg-[#0B0F19] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex">
+                      <div className="bg-[#0B0F19] border border-white/10 rounded-2xl shadow-2xl overflow-hidden p-2 flex flex-col gap-1">
                         
-                        {/* LEFT COLUMN */}
-                        <div className="w-1/2 p-2 border-r border-white/5 flex flex-col gap-1 bg-white/[0.02]">
+                         {/* Only rendering the 3 Main Items now */}
                           {link.subItems.map((sub) => (
                             <Link 
                               key={sub.name} 
                               to={sub.path}
-                              onMouseEnter={() => setHoveredProduct(sub.name)}
-                              className={`
-                                px-4 py-3 rounded-xl flex items-start gap-3 transition-all
-                                ${hoveredProduct === sub.name ? 'bg-white/10' : 'hover:bg-white/5'}
-                              `}
+                              className="px-4 py-3 rounded-xl flex items-start gap-3 transition-all hover:bg-white/5 group/item"
                             >
-                              <div className={`mt-1 p-1.5 rounded-lg ${hoveredProduct === sub.name ? 'bg-[#7B5eea]/20' : 'bg-white/5'}`}>
+                              <div className="mt-1 p-1.5 rounded-lg bg-white/5 group-hover/item:bg-[#7B5eea]/20 transition-colors">
                                 <img src={sub.icon} alt={sub.name} className="w-5 h-5 object-contain" />
                               </div>
                               <div>
@@ -133,42 +121,6 @@ const Navbar = () => {
                               </div>
                             </Link>
                           ))}
-                        </div>
-
-                        {/* RIGHT COLUMN (MODELS) */}
-                        <div className="w-1/2 p-4 bg-[#020617]">
-                          <h4 className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-3">
-                            {hoveredProduct} Models
-                          </h4>
-                          
-                          {link.subItems.find(item => item.name === hoveredProduct)?.models.length > 0 ? (
-                            <div className="flex flex-col gap-2">
-                              {link.subItems.find(item => item.name === hoveredProduct).models.map((model) => (
-                                // CHANGE: Replaced 'div' with 'Link' and added 'to={model.path}'
-                                <Link 
-                                  key={model.name} 
-                                  to={model.path}
-                                  className="flex items-center gap-3 p-2 hover:bg-white/5 rounded-lg cursor-pointer group/model"
-                                >
-                                  <img 
-                                    src={model.icon} 
-                                    alt={model.name} 
-                                    className="w-4 h-4 object-contain opacity-70 group-hover/model:opacity-100 transition-opacity" 
-                                  />
-                                  <div className="flex flex-col">
-                                    <span className="text-slate-300 text-xs font-medium group-hover/model:text-white">{model.name}</span>
-                                    <span className="text-[10px] text-slate-500">{model.desc}</span>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                          ) : (
-                            <div className="h-full flex items-center justify-center text-slate-600 text-xs italic">
-                              No models available yet.
-                            </div>
-                          )}
-                        </div>
-
                       </div>
                     </div>
                   )}
@@ -237,22 +189,7 @@ const Navbar = () => {
                              {sub.badge && <span className="text-[9px] bg-[#7B5eea]/20 text-[#9F85FF] px-1 rounded">{sub.badge}</span>}
                           </Link>
                           
-                          {/* CHANGE: Mobile Models List also uses Links now */}
-                          {sub.models && sub.models.length > 0 && (
-                             <div className="pl-6 flex flex-col gap-2 mb-3 border-l border-white/10 ml-2">
-                                {sub.models.map(m => (
-                                  <Link 
-                                    key={m.name} 
-                                    to={m.path} // <--- Added Path
-                                    onClick={() => setIsMobileMenuOpen(false)} // <--- Close menu on click
-                                    className="flex items-center gap-2"
-                                  >
-                                    <img src={m.icon} alt={m.name} className="w-3 h-3 object-contain opacity-50" />
-                                    <span className="text-xs text-slate-400">{m.name}</span>
-                                  </Link>
-                                ))}
-                             </div>
-                          )}
+                          {/* REMOVED: Mobile Models List loop */}
                         </div>
                       ))}
                     </div>
