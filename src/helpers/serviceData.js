@@ -10,88 +10,88 @@ import iconSignal from '../assets/pulse3.png'; // Example path
 
 export const servicesData = {
   flux: {
-    name: "Flux", // Used for ID or logic
-    title: "Flux (Social media)", // Hero Title
-    heroSubtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ma.",
+    name: "Flux", 
+    title: "Flux (Social media)", 
+    heroSubtitle: "Your always-on creative engine.", 
     icon: iconFlux,
     accentColor: "#EC4899", // Pink
     headline: "Your always-on creative engine.",
-    description: "Flux designs, schedules, and posts content that grows your audience and keeps your brand active across social channels, without the grind.",
-    corePromise: "Grow your presence without spending your life on content.",
+    description: "Flux designs, schedules, and posts content that grows your audience and keeps your brand active across social channels, without the grind. It adapts to trends, learns your tone, and makes sure you show up consistently where your customers hang out.", 
+    corePromise: "Grow your presence without spending your life on content.", 
     features: [
       "Social content creation",
-      "Trend and hashtag suggestions",
       "Auto-scheduling",
-      "Insights lite",
-      "Multi-platform posting"
-    ]
+      "Multi-platform posting",
+      "Trend + hashtag suggestions",
+      "Insights lite"
+    ] 
   },
   drift: {
     name: "Drift",
-    title: "Drift (Email marketing)",
-    heroSubtitle: "Warm leads, clearer funnels, stronger revenue. Drift writes, optimises, and sends emails that land.",
+    title: "Drift (Email Marketing)", 
+    heroSubtitle: "Warm leads, clearer funnels, stronger revenue.", 
     icon: iconDrift,
     accentColor: "#2DD4BF", // Teal
-    headline: "Precision email marketing at scale.",
-    description: "Drift manages your newsletters, drip campaigns, and customer re-engagement flows to ensure you never miss a lead.",
-    corePromise: "Turn your subscriber list into revenue on autopilot.",
+    headline: "Warm leads, clearer funnels, stronger revenue.",
+    description: "Drift writes, optimises, and sends emails that land, campaigns, newsletters, onboarding flows, triggers, and personalisation baked in. Whether you’re nurturing or converting, Drift keeps your pipeline moving.", 
+    corePromise: "Emails that perform, at a pace your business can feel.", 
     features: [
-      "Automated Drip Campaigns",
-      "Newsletter Generation",
-      "Audience Segmentation",
-      "A/B Testing",
-      "Performance Analytics"
-    ]
+      "Email writing + optimisation",
+      "Automations + flows",
+      "Campaign setup",
+      "List segmentation",
+      "Performance reports"
+    ] 
   },
   summit: {
     name: "Summit",
-    title: "Summit (Customer success)",
-    heroSubtitle: "Keep customers happy, heard, and supported, automatically.",
+    title: "Summit (Customer Success)", 
+    heroSubtitle: "Keep customers happy, heard, and supported, automatically.", 
     icon: iconSummit,
     accentColor: "#A78BFA", // Purple
-    headline: "Turn customers into loyal advocates.",
-    description: "Summit drives customer success through automated onboarding, proactive check-ins, and feedback loops.",
-    corePromise: "Maximize retention and reduce churn proactively.",
+    headline: "Keep customers happy, heard, and supported, automatically.",
+    description: "Summit manages customer conversations, responds to queries, resolves issues, escalates when needed, and keeps your customers feeling cared for. It learns your product, your policies, and your tone.", 
+    corePromise: "Consistent, reliable customer care that scales with you.", 
     features: [
-      "Automated Onboarding",
-      "Proactive Health Checks",
-      "Churn Risk Detection",
-      "Feedback Loops",
-      "Success Milestones"
-    ]
+      "Customer chat & email handling",
+      "Issue triage",
+      "Escalations",
+      "Saved replies + templates",
+      "CS metrics"
+    ] 
   },
   atlas: {
     name: "Atlas",
-    title: "Atlas (Virtual assistant)",
-    heroSubtitle: "Your dependable operator, organised, calm, and fast.",
+    title: "Atlas (Virtual Assistant)", 
+    heroSubtitle: "Your dependable operator, organised, calm, and fast.", 
     icon: iconAtlas,
     accentColor: "#60A5FA", // Blue
-    headline: "Your intelligent virtual assistant.",
-    description: "Atlas handles scheduling, inbox management, and basic research tasks, freeing up your mental bandwidth.",
-    corePromise: "Reclaim 10+ hours of your week instantly.",
+    headline: "Your dependable operator, organised, calm, and fast.",
+    description: "Atlas handles your admin, tasks, research, scheduling, documentation, data entry, and everything that slows you down. Think “operations assistant” without the overhead.", 
+    corePromise: "Your workload stays light, even when your business doesn’t.", 
     features: [
-      "Smart Scheduling",
-      "Inbox Triage",
-      "Meeting Prep",
-      "Travel Booking",
-      "Data Entry"
-    ]
+      "Daily admin tasks",
+      "Scheduling",
+      "Research & notes",
+      "Documentation",
+      "Process guidance"
+    ] 
   },
   signal: {
     name: "Signal",
-    title: "Signal (Copywriting)",
-    heroSubtitle: "Clear, compelling words for every touchpoint.",
+    title: "Signal (Copywriting)", 
+    heroSubtitle: "Clear, compelling words for every touchpoint.", 
     icon: iconSignal,
     accentColor: "#22D3EE", // Cyan
-    headline: "Words that convert, on demand.",
-    description: "Signal learns your brand voice to generate high-converting copy for ads, landing pages, and emails.",
-    corePromise: "Never stare at a blank page again.",
+    headline: "Clear, compelling words for every touchpoint.",
+    description: "Signal writes with purpose, website copy, product descriptions, ads, blogs, scripts, templates, sales materials. It adapts to your brand voice and ensures everything you publish sounds like you at your best.", 
+    corePromise: "Your brand feels sharp, consistent, and unmistakably you.", 
     features: [
-      "Ad Copy Generation",
-      "Landing Page Content",
-      "Brand Voice Adaptation",
-      "SEO Optimization",
-      "Content Repurposing"
-    ]
+      "Copywriting for all channels",
+      "Editing + rewriting",
+      "Brand tone calibration",
+      "Ad copy + landing pages",
+      "Multi-format writing"
+    ] 
   }
 };
