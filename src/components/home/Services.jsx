@@ -102,6 +102,29 @@ const ServicesSection = () => {
         </div>
       </section>
 
+      {/* ==============================================
+          PART 3: CORE FEATURES (New Section - White)
+      =============================================== */}
+      <section className="w-full bg-white py-24 px-6 md:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <div className="max-w-2xl">
+            <h2 className="text-[#0F172A] text-4xl md:text-5xl font-normal leading-tight mb-6">
+              Core Features <br />
+              & Integrations
+            </h2>
+            <p className="text-[#475569] text-lg md:text-xl font-light leading-relaxed mb-10">
+              NedTech.ai brings all your essential tools and AI employees 
+              together in one place.
+            </p>
+            <Link to="/features">
+              <button className="px-8 py-3 rounded-full border border-[#0F172A] text-[#0F172A] font-medium text-sm hover:bg-[#0F172A] hover:text-white transition-colors duration-300">
+                Explore features
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };

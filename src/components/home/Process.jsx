@@ -17,7 +17,7 @@ const ProcessSection = () => {
         <div className="flex flex-col xl:flex-row items-center justify-center gap-8 w-full max-w-6xl relative">
           
           {/* LEFT ARROW BUTTON */}
-          <button className="hidden xl:flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg hover:scale-110 transition-transform z-10 text-[#7C3AED]">
+          <button className="hidden xl:flex items-center justify-center w-14 h-14 bg-slate-300 rounded-full shadow-lg hover:scale-110 transition-transform z-10 text-[#7C3AED]">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M19 12H5" />
               <path d="M12 19l-7-7 7-7" />
@@ -59,7 +59,7 @@ const ProcessSection = () => {
           </div>
 
           {/* RIGHT ARROW BUTTON */}
-          <button className="hidden xl:flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg hover:scale-110 transition-transform z-10 text-[#7C3AED]">
+          <button className="hidden xl:flex items-center justify-center w-14 h-14 bg-slate-300 rounded-full shadow-lg hover:scale-110 transition-transform z-10 text-[#7C3AED]">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14" />
               <path d="M12 5l7 7-7 7" />

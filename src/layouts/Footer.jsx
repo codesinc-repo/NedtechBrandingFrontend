@@ -42,10 +42,12 @@ const Footer = ({ withCTA = true }) => {
               Everything you need to accept card payments and grow your business anywhere on the planet.
             </p>
             <Link to="/signup">
-              <button className="bg-white text-[#4F46E5] px-8 py-3.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors shadow-lg">
-                Start your free trial
-              </button>
-            </Link>
+  <button className="bg-white text-[#4F46E5] px-8 py-3.5 rounded-full font-semibold text-sm 
+                     hover:bg-[#27227a] hover:text-white transition-colors shadow-lg">
+    Start your free trial
+  </button>
+</Link>
+
           </div>
         </div>
       )}
