@@ -11,7 +11,11 @@ const Hero = ({
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
           
           {/* Left Column: Text Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-start space-y-6 z-10">
+          {/* ADDED: lg:-mt-16 
+              This pulls the text block up by 64px on large screens 
+              so it sits higher than the center of the image. 
+          */}
+          <div className="w-full lg:w-1/2 flex flex-col items-start space-y-6 z-10 lg:-mt-16 ">
             <h1 className="text-4xl md:text-5xl lg:text-[64px] font-semibold text-white tracking-tight leading-[1.1]">
               {title}
             </h1>

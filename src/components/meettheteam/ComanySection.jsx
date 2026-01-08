@@ -58,19 +58,32 @@ const FoundingMembers = () => {
               </div>
             </div>
 
-            {/* --- TEXT SIDE --- */}
-            <div className="w-full md:w-1/2 flex flex-col items-start text-left">
-              <h3 className="text-[#0F172A] text-2xl md:text-3xl font-normal mb-6">
-                {profile.name}
-              </h3>
-              <p className="text-[#64748B] text-sm leading-relaxed mb-6 font-light">
-                {profile.bio}
-              </p>
-              <p className="text-[#94A3B8] text-xs leading-relaxed max-w-xs">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
+ {/* --- TEXT SIDE --- */}
+<div className="w-full md:w-1/2 flex flex-col items-start text-left">
+  
+  {/* NAME: Increased size significantly to match the image's scale */}
+  <h3 className="text-[#0F172A] text-5xl md:text-6xl font-normal mb-8 tracking-tight">
+    {profile.name}
+  </h3>
 
+  {/* BIO (Main Paragraph): 
+      - Increased text size to 'text-xl' or 'text-2xl' (it is large in the image).
+      - Darkened color to #334155 for better readability/contrast.
+      - kept 'font-light' to match the slender look of the font in the image.
+  */}
+  <p className="text-[#334155] text-xl md:text-2xl leading-relaxed mb-8 font-light">
+    {profile.bio}
+  </p>
+
+  {/* SECONDARY TEXT: 
+      - Increased from 'text-xs' to 'text-sm' (xs is too small).
+      - Removed 'max-w-xs' to let the text flow naturally.
+  */}
+  <p className="text-[#64748B] text-sm md:text-base leading-relaxed">
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  </p>
+  
+</div>
           </div>
         ))}
 

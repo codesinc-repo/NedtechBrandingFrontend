@@ -48,17 +48,18 @@ const FeatureComparison = () => {
         <div className="w-full overflow-x-auto pb-6 relative">
           
           {/* GRID LAYOUT: 
-              - [180px fixed left column] 
+              - [200px fixed left column] 
               - [3 flexible columns for plans] 
-              - Min-width ensures it doesn't crush on mobile 
           */}
           <div className="min-w-[900px] grid grid-cols-[200px_1fr_1fr_1fr] gap-4">
 
-            {/* ================= HEADER ROW ================= */}
+            {/* ================= ROW 1: CARDS ================= */}
             
-            {/* 1. Sticky Title Column */}
-            <div className="sticky left-0 bg-[#020617] z-20 flex items-end pb-8 pl-2 border-r border-white/5 md:border-none shadow-[4px_0_24px_-2px_rgba(0,0,0,0.5)] md:shadow-none">
-              <h3 className="text-white text-lg font-medium">Features</h3>
+            {/* 1. Top-Left Corner (Now Empty) 
+                We keep this 'sticky' so the layout doesn't break on scroll, but it's empty visually.
+            */}
+            <div className="sticky left-0 bg-[#020617] z-20 border-r border-white/5 md:border-none shadow-[4px_0_24px_-2px_rgba(0,0,0,0.5)] md:shadow-none">
+              {/* Empty Space */}
             </div>
 
             {/* 2. Pulse Card */}
@@ -84,6 +85,20 @@ const FeatureComparison = () => {
               <p className="text-gray-400 text-[10px] mb-4 h-8 leading-tight">Strategic clarity & leverage.</p>
               <span className="text-white text-2xl font-light">£XXX</span>
             </div>
+
+
+            {/* ================= ROW 2: HEADER ROW (NEW) ================= */}
+            {/* This row sits between the cards and the data list */}
+
+            {/* 1. "Features" Heading (Sticky Left) */}
+            <div className="sticky left-0 bg-[#020617] z-20 flex items-center py-4 pl-2 border-b border-white/5 border-r border-white/5 md:border-r-0 shadow-[4px_0_10px_-5px_rgba(0,0,0,0.5)] md:shadow-none">
+               <h3 className="text-white text-lg font-medium">Features</h3>
+            </div>
+
+            {/* 2. Spacers for the rest of the row (to maintain grid structure) */}
+            <div className="border-b border-white/5 bg-[#020617]/50"></div>
+            <div className="border-b border-white/5 bg-[#020617]/50"></div>
+            <div className="border-b border-white/5 bg-[#020617]/50"></div>
 
 
             {/* ================= DATA ROWS LOOP ================= */}
@@ -117,7 +132,7 @@ const FeatureComparison = () => {
         </div>
 
         {/* Footer Note */}
-        <div className="mt-8 text-gray-600 text-[10px] uppercase tracking-wider px-2">
+        <div className="mt-8 text-[#60A5FA] text-[10px] uppercase tracking-wider px-2">
           * T&Cs Apply
         </div>
 

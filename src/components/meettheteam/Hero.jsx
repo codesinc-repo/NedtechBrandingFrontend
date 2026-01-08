@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Hero = ({ 
-  title = "Meet the team", 
+  title = "Standard Content", 
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ma. Lorem ipsum dolor sit amet, consectetur adipiscing.",
   imageSrc = "path-to-your-team-image.jpg" // Replace with your import or URL
 }) => {
@@ -11,7 +11,11 @@ const Hero = ({
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
           
           {/* Left Column: Text Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-start space-y-6 z-10">
+          {/* CHANGED: Replaced margin with 'lg:-translate-y-16'
+              - This forces the text block to shift UP by 64px from the center line.
+              - It works even if flexbox tries to center it.
+          */}
+          <div className="w-full lg:w-1/2 flex flex-col items-start space-y-6 z-10 lg:-translate-y-16">
             <h1 className="text-4xl md:text-5xl lg:text-[64px] font-semibold text-white tracking-tight leading-[1.1]">
               {title}
             </h1>

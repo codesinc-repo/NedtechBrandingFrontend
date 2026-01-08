@@ -10,25 +10,27 @@ import FAQ from '../components/home/Faq';
 export default function FoundingPage() {
   return (
     <>
-    <HeroSection
-      // 1. Alignment: Left text, open space on right
-      align="left"
+   <HeroSection
+  // 1. Alignment
+  align="left"
 
-      // 2. Text Content
-      title="Join 50 founders shaping the future of work."
-      
-      // There is no subtitle in this specific screenshot, so we pass null or empty string
-      subtitle={null}
+  // 2. Text Content
+  // CHANGE: Pass a <span> with classes instead of a plain string.
+  // We use '!text-4xl' to force the override if the component has a hardcoded size.
+  title={
+    <span className="!text-3xl md:!text-4xl lg:!text-5xl leading-tight block mb-10">
+      Join 50 founders shaping the future of work.
+    </span>
+  }
+  
+  subtitle={null}
 
-      // 3. Button
-      primaryBtnText="Apply to Join the Founding 50"
+  // 3. Button
+  primaryBtnText="Apply to Join the Founding 50"
 
-      // 4. Visuals
-      // IMPORTANT: We pass 'null' here. 
-      // This keeps the right side empty of widgets/cards, allowing the 
-      // component's internal 'WaveBg' (the purple wave) to be the main visual on the right.
-      rightContent={null}
-    />
+  // 4. Visuals
+  rightContent={null}
+/>
     <StatsSection/>
     <FoundingFormSection/>
     <AboutSpotlight/>

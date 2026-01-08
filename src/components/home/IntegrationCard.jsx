@@ -4,7 +4,7 @@ import integrationLogos from '../../assets/integrations-logos.png';
 
 const IntegrationCard = () => {
   return (
-    <div className="w-full rounded-[32px] overflow-hidden flex flex-col md:flex-row shadow-2xl">
+    <div className="w-full rounded-[32px] overflow-hidden flex flex-col md:flex-row shadow-2xl ml-9">
       
       {/* Left Side: Purple Gradient */}
       <div className="w-full md:w-1/2 bg-gradient-to-br from-[#1e1b4b] to-[#5b21b6] p-10 md:p-14 flex flex-col justify-center">

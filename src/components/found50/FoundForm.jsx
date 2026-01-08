@@ -9,7 +9,7 @@ const FoundingFormSection = () => {
       {/* =========================================================
           PART 1: TESTIMONIAL SLIDER (Light Section)
       ========================================================== */}
-      <section className="bg-white pt-20 pb-24 px-4 md:px-8">
+      <section className="bg-white pb-24 px-4 md:px-8">
         <div className="container mx-auto max-w-6xl">
             
             {/* Card Container: Rounded corners and light gray bg */}

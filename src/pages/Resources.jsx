@@ -15,7 +15,7 @@ const Resources = () => {
         imageSrc={TeamPhoto}
       />
     <ContentTextImages/>
-    <FoundingFormSection/>
+   
     <IntegrationCard/>
     </>
   )
