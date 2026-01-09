@@ -109,6 +109,44 @@ const FounderAndMission = () => {
         </div>
       </section>
 
+      {/* =========================================================
+          SECTION 3: FUTURE OF WORK (Clean White Background)
+          *** NEW SECTION ADDED BELOW ***
+      ========================================================== */}
+      <section className="w-full bg-white py-24 px-6 md:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+            
+            {/* Left Column Text */}
+            <div className="flex flex-col gap-6">
+              <p className="text-[#475569] text-lg md:text-xl font-light leading-relaxed">
+                The future of work is evolving faster than most SMEs can realistically keep pace with.
+              </p>
+              <p className="text-[#475569] text-lg md:text-xl font-light leading-relaxed">
+                Since the pandemic, skilled talent has become more expensive, harder to find, and 
+                significantly slower to hire. Lean teams are stretched thin, growth stalls, and the cost 
+                of every new hire carries more risk than ever.
+              </p>
+            </div>
+
+            {/* Right Column Text */}
+            <div className="flex flex-col gap-6">
+              <p className="text-[#475569] text-lg md:text-xl font-light leading-relaxed">
+                The data reflects this pressure clearly. According to the 2024 Employer Skills Survey (NCUB), 
+                27% of all UK vacancies are now caused by skills shortages well above pre-pandemic levels 
+                (22% in 2017).
+              </p>
+              <p className="text-[#475569] text-lg md:text-xl font-light leading-relaxed">
+                The smallest firms feel it most: businesses with 2–4 employees report skills-
+                shortage vacancy rates of ~42%. SMEs are disproportionately affected because they lack the 
+                resources and reach of larger organizations.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };

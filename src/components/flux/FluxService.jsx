@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 // --- IMPORT ASSETS ---
 // Ensure you export the PINK versions of these icons from Figma
-import iconFlux from "../../assets/flux.png";
-import iconSummit from "../../assets/summit.png";
-import iconDrift from "../../assets/drift.png";
-import iconSignal from "../../assets/signal.png";
-import iconAtlas from "../../assets/altas.png";
+import iconFlux from "../../assets/fluxnew.png";
+import iconSummit from "../../assets/summitnew.png";
+import iconDrift from "../../assets/driftnew.png";
+import iconSignal from "../../assets/signalnew.png";
+import iconAtlas from "../../assets/atlasnew.png";
 
 const PulseRelatedServices = () => {
   

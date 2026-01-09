@@ -1,12 +1,12 @@
 // src/data/servicesData.js
 
 // Import all your specific icons here
-import iconFlux from '../assets/flux.png';
+import iconFlux from '../assets/fluxnew.png';
 // Agar baaki icons nahi hain to temporarily flux wala hi use karein ya naye import karein
-import iconDrift from '../assets/pulse6.png'; // Example path
-import iconSummit from '../assets/pulse4.png'; // Example path
-import iconAtlas from '../assets/pulse5.png'; // Example path
-import iconSignal from '../assets/pulse3.png'; // Example path
+import iconDrift from '../assets/driftnew.png'; // Example path
+import iconSummit from '../assets/summitnew.png'; // Example path
+import iconAtlas from '../assets/atlasnew.png'; // Example path
+import iconSignal from '../assets/signalnew.png'; // Example path
 
 export const servicesData = {
   flux: {

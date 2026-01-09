@@ -22,7 +22,7 @@ const FoundingFormSection = () => {
                     
                     {/* Quote Text */}
                     <h3 className="text-3xl md:text-4xl text-[#0F172A] font-light leading-snug mb-8">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+                        Scale like an enterprise - without enterprise budget
                     </h3>
                     
                     {/* Author */}

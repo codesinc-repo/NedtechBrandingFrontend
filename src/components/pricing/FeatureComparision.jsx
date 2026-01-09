@@ -1,7 +1,7 @@
 import React from 'react';
 
 // --- IMPORT ASSETS ---
-import iconPulse from '../../assets/pulse.png';
+import iconPulse from '../../assets/pulsenew.png';
 import iconVector from '../../assets/management.png';
 import iconHorizon from '../../assets/drift2.png'; 
 

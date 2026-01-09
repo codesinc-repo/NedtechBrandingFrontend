@@ -5,20 +5,20 @@ import React from "react";
 // If you haven't exported them yet, these lines will need the actual files to work.
 
 // Pulse Assets
-import PulseHero from "../../assets/pulsehero.png";
-import PulseFlux from "../../assets/flux.png";
-import PulseSummit from "../../assets/summit.png";
-import PulseDrift from "../../assets/drift.png";
-import PulseSignal from "../../assets/signal.png";
-import PulseAtlas from "../../assets/altas.png";
+import PulseHero from "../../assets/pulsenew.png";
+import PulseFlux from "../../assets/fluxnew.png";
+import PulseSummit from "../../assets/summitnew.png";
+import PulseDrift from "../../assets/driftnew.png";
+import PulseSignal from "../../assets/signalnew.png";
+import PulseAtlas from "../../assets/atlasnew.png";
 
 // Management Assets
 import MgmtHero from "../../assets/management.png";
-import MgmtFlux from "../../assets/flux1.png";
-import MgmtSummit from "../../assets/summit1.png";
-import MgmtDrift from "../../assets/drift1.png";
-import MgmtSignal from "../../assets/signal1.png";
-import MgmtAtlas from "../../assets/altas1.png";
+import MgmtFlux from "../../assets/fluxnew.png";
+import MgmtSummit from "../../assets/summitnew.png";
+import MgmtDrift from "../../assets/driftnew.png";
+import MgmtSignal from "../../assets/signalnew.png";
+import MgmtAtlas from "../../assets/atlasnew.png";
 
 // Director Assets
 import DirectorHero from "../../assets/director.png";

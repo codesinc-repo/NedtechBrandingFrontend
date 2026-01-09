@@ -1,8 +1,8 @@
 import React from 'react';
 // Import the 3 icons you exported
-import iconPulse from '../../assets/pulse.png';
-import iconNexus from '../../assets/nexus.png';
-import iconHorizon from '../../assets/horizon.png';
+import iconPulse from '../../assets/pulsenew.png';
+import iconNexus from '../../assets/nexusnew.png';
+import iconHorizon from '../../assets/horizonnew.png';
 import { Link } from 'react-router-dom';
 
 const ServicesSection = () => {

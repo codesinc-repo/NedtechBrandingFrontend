@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // 1. Import Navigation Hook
 
 // --- IMPORT ASSETS ---
-import iconPulse from '../../assets/pulse.png';
+import iconPulse from '../../assets/pulsenew.png';
 import iconVector from '../../assets/management.png';
 import iconHorizon from '../../assets/drift2.png'; 
 

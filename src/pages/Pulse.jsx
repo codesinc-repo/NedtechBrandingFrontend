@@ -7,11 +7,11 @@ import FAQ from '../components/home/Faq';
 
 // --- Import Images ---
 import imgAutomation from '../assets/pulse1.png';
-import imgFlux from '../assets/pulse2.png';
-import imgSignal from '../assets/pulse3.png';
-import imgSummit from '../assets/pulse4.png';
-import imgAtlas from '../assets/pulse5.png';
-import imgDrift from '../assets/pulse6.png';
+import imgFlux from '../assets/pulsenew.png';
+import imgSignal from '../assets/signalnew.png';
+import imgSummit from '../assets/summitnew.png';
+import imgAtlas from '../assets/atlasnew.png';
+import imgDrift from '../assets/driftnew.png';
 
 const PulsePage = () => {
 

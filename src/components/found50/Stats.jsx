@@ -2,7 +2,7 @@ import React from 'react';
 // If you have the top-right wave graphic exported, import it here.
 // import WaveGraphic from '../../assets/top-right-wave.png'; 
 
-const   StatsSection = () => {
+const StatsSection = () => {
   return (
     <div className="w-full flex flex-col">
 
@@ -19,7 +19,6 @@ const   StatsSection = () => {
         <div className="container mx-auto max-w-6xl relative z-10">
             
             {/* Stats Grid with Vertical Dividers */}
-            {/* 'divide-x' adds the vertical lines between columns automatically on desktop */}
             <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-purple-500/30 gap-12 md:gap-0 mb-16">
 
                 {/* Stat 1 */}
@@ -67,14 +66,18 @@ const   StatsSection = () => {
             {/* Column 1 */}
             <div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+                  We’re inviting a select group of 50 founder-led businesses to join The Helm Founding 50, our Early Access Programme. You’ll get early access to Helm’s platform, direct input into our roadmap, and the opportunity to shape how small businesses scale with AI. You won’t just use Helm, you’ll help build it.
                 </p>
             </div>
 
             {/* Column 2 */}
             <div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  What You’ll Get:<br />
+                  Complimentary early access to the platform <br />
+                  One-to-one onboarding and feedback sessions <br />
+                  Recognition as a Founding Member <br />
+                  Exclusive affiliate and community benefits after launch
                 </p>
             </div>
 
