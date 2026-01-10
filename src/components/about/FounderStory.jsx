@@ -1,8 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 // Import the wave graphic for the Founder Story card
 import cardWaveGraphic from '../../assets/card-wave.png';
 
 const FounderAndMission = () => {
+  // 1. Logic: State to track which slide is currently active (0, 1, or 2)
+  const [activeIndex, setActiveIndex] = useState(1); // Start at index 1 (Story 02) to match original design
+
+  // 2. Logic: Data Array for the cards
+  const founderStories = [
+    {
+      id: 0,
+      number: '01',
+      text: 'Faced small business struggles first-hand.',
+      hasWave: false,
+    },
+    {
+      id: 1,
+      number: '02',
+      text: 'Noticed lack of smart, affordable automation.',
+      hasWave: true, // This card has the image
+    },
+    {
+      id: 2,
+      number: '03',
+      text: 'Created NedTech.ai as an AI-powered workforce.',
+      hasWave: false,
+    },
+  ];
+
+  // 3. Logic: Functions to handle navigation
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % founderStories.length);
+  };
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev - 1 + founderStories.length) % founderStories.length);
+  };
+
+  // 4. Logic: Determine the order of cards to display (Left, Center, Right)
+  // We need to render exactly 3 items: The one before active, the active one, and the one after.
+  const getOrderedIndices = () => {
+    const prevIndex = (activeIndex - 1 + founderStories.length) % founderStories.length;
+    const nextIndex = (activeIndex + 1) % founderStories.length;
+    return [prevIndex, activeIndex, nextIndex];
+  };
+
+  const orderedIndices = getOrderedIndices();
+
   return (
     <div className="w-full flex flex-col">
       
@@ -24,46 +68,63 @@ const FounderAndMission = () => {
           {/* Cards Carousel */}
           <div className="flex flex-col xl:flex-row items-center justify-center gap-6 w-full max-w-6xl relative mb-12">
             
-            {/* Left Arrow */}
-            <button className="hidden xl:flex items-center justify-center p-2 text-[#7C3AED] hover:scale-110 transition-transform">
+            {/* Left Arrow Button */}
+            <button 
+              onClick={handlePrev}
+              className="hidden xl:flex items-center justify-center p-2 text-[#7C3AED] hover:scale-110 transition-transform cursor-pointer z-20"
+            >
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M19 12H5" />
                 <path d="M12 19l-7-7 7-7" />
               </svg>
             </button>
 
-            {/* Card 01 */}
-            <div className="w-full max-w-xs xl:w-[280px] h-[280px] bg-[#05091D] rounded-3xl p-8 flex flex-col justify-center shadow-xl relative group hover:-translate-y-2 transition-transform duration-300">
-              <span className="text-[#7C3AED] text-xl font-medium mb-4 block">01</span>
-              <p className="text-white text-2xl font-normal leading-snug">
-                Faced small business struggles first-hand.
-              </p>
-            </div>
+            {/* DYNAMIC CARD RENDERING */}
+            {orderedIndices.map((storyIndex, positionMapIndex) => {
+              const story = founderStories[storyIndex];
+              const isCenter = positionMapIndex === 1; // The middle item in the array is the Center card
 
-            {/* Card 02 (Center Highlight) */}
-            <div className="w-full max-w-sm xl:w-[350px] h-[350px] bg-[#05091D] rounded-3xl p-10 flex flex-col justify-center shadow-2xl relative z-10 overflow-hidden scale-100 xl:scale-105">
-              <span className="text-[#7C3AED] text-2xl font-medium mb-4 block">02</span>
-              <p className="text-white text-3xl font-normal leading-tight relative z-10">
-                Noticed lack of smart, affordable automation.
-              </p>
-              {/* Wave Asset */}
-              <img 
-                src={cardWaveGraphic} 
-                alt="" 
-                className="absolute bottom-0 right-0 w-40 h-40 object-cover object-bottom opacity-100 pointer-events-none translate-y-4 translate-x-4"
-              />
-            </div>
+              return (
+                <div 
+                  key={story.id} // Key ensures React knows which card is which for animation
+                  onClick={() => setActiveIndex(storyIndex)} // Allow clicking a side card to make it active
+                  className={`
+                    transition-all duration-500 ease-in-out cursor-pointer
+                    flex flex-col justify-center bg-[#05091D] rounded-3xl relative
+                    ${isCenter 
+                      ? 'w-full max-w-sm xl:w-[350px] h-[350px] p-10 shadow-2xl z-10 scale-100 xl:scale-105' 
+                      : 'w-full max-w-xs xl:w-[280px] h-[280px] p-8 shadow-xl opacity-90 hover:opacity-100 hover:-translate-y-2'
+                    }
+                  `}
+                >
+                  <span className={`text-[#7C3AED] font-medium mb-4 block transition-all duration-300 ${isCenter ? 'text-2xl' : 'text-xl'}`}>
+                    {story.number}
+                  </span>
+                  
+                  <p className={`text-white font-normal relative z-10 transition-all duration-300 ${isCenter ? 'text-3xl leading-tight' : 'text-2xl leading-snug'}`}>
+                    {story.text}
+                  </p>
 
-            {/* Card 03 */}
-            <div className="w-full max-w-xs xl:w-[280px] h-[280px] bg-[#05091D] rounded-3xl p-8 flex flex-col justify-center shadow-xl relative group hover:-translate-y-2 transition-transform duration-300">
-              <span className="text-[#7C3AED] text-xl font-medium mb-4 block">03</span>
-              <p className="text-white text-2xl font-normal leading-snug">
-                Created NedTech.ai as an AI-powered workforce.
-              </p>
-            </div>
+                  {/* Render Wave Graphic ONLY if it is the specific story AND it is in the center */}
+                  {story.hasWave && (
+                    <img 
+                      src={cardWaveGraphic} 
+                      alt="Wave" 
+                      className={`
+                        absolute bottom-0 right-0 w-40 h-40 object-cover object-bottom pointer-events-none translate-y-4 translate-x-4 transition-opacity duration-500
+                        ${isCenter ? 'opacity-100' : 'opacity-0'} 
+                      `}
+                    />
+                  )}
+                </div>
+              );
+            })}
 
-            {/* Right Arrow */}
-            <button className="hidden xl:flex items-center justify-center p-2 text-[#7C3AED] hover:scale-110 transition-transform">
+            {/* Right Arrow Button */}
+            <button 
+              onClick={handleNext}
+              className="hidden xl:flex items-center justify-center p-2 text-[#7C3AED] hover:scale-110 transition-transform cursor-pointer z-20"
+            >
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14" />
                 <path d="M12 5l7 7-7 7" />
@@ -71,13 +132,20 @@ const FounderAndMission = () => {
             </button>
           </div>
 
-          {/* Pagination Dots */}
+          {/* Pagination Dots (Dynamic) */}
           <div className="flex items-center gap-3">
-            <div className="w-2.5 h-2.5 border border-[#7C3AED] rounded-sm bg-transparent"></div>
-            <div className="w-2.5 h-2.5 border border-[#7C3AED] rounded-sm bg-transparent"></div>
-            <div className="w-2.5 h-2.5 bg-[#7C3AED] rounded-sm shadow-[0_0_10px_rgba(124,58,237,0.5)]"></div>
-            <div className="w-2.5 h-2.5 border border-[#7C3AED] rounded-sm bg-transparent"></div>
-            <div className="w-2.5 h-2.5 border border-[#7C3AED] rounded-sm bg-transparent"></div>
+            {founderStories.map((_, idx) => (
+              <div 
+                key={idx}
+                onClick={() => setActiveIndex(idx)}
+                className={`
+                  w-2.5 h-2.5 rounded-sm cursor-pointer transition-all duration-300
+                  ${activeIndex === idx 
+                    ? 'bg-[#7C3AED] shadow-[0_0_10px_rgba(124,58,237,0.5)] scale-110' 
+                    : 'border border-[#7C3AED] bg-transparent hover:bg-[#7C3AED]/20'}
+                `}
+              ></div>
+            ))}
           </div>
         </div>
       </section>
@@ -111,7 +179,6 @@ const FounderAndMission = () => {
 
       {/* =========================================================
           SECTION 3: FUTURE OF WORK (Clean White Background)
-          *** NEW SECTION ADDED BELOW ***
       ========================================================== */}
       <section className="w-full bg-white py-24 px-6 md:px-12">
         <div className="container mx-auto max-w-6xl">

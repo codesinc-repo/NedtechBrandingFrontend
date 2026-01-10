@@ -25,7 +25,7 @@ const StatsSection = () => {
                 <div className="flex flex-col items-center justify-center text-center px-4">
                     <span className="text-7xl md:text-8xl font-light text-white mb-6">126%</span>
                     <p className="text-slate-300 text-xl font-light leading-tight">
-                        Lorem ipsum <br/> dolor sit
+                        Increase in <br/> Qualified Leads
                     </p>
                 </div>
 
@@ -33,7 +33,7 @@ const StatsSection = () => {
                 <div className="flex flex-col items-center justify-center text-center px-4">
                     <span className="text-7xl md:text-8xl font-light text-white mb-6">109%</span>
                     <p className="text-slate-300 text-xl font-light leading-tight">
-                        Lorem ipsum <br/> dolor sit
+                        Growth in <br/> Annual Revenue
                     </p>
                 </div>
 
@@ -41,7 +41,7 @@ const StatsSection = () => {
                 <div className="flex flex-col items-center justify-center text-center px-4">
                     <span className="text-7xl md:text-8xl font-light text-white mb-6">96%</span>
                     <p className="text-slate-300 text-xl font-light leading-tight">
-                        Lorem ipsum <br/> dolor sit
+                        Boost in <br/> Efficiency
                     </p>
                 </div>
 
@@ -88,4 +88,4 @@ const StatsSection = () => {
   );
 };
 
-export default StatsSection;
+export default StatsSection;x
