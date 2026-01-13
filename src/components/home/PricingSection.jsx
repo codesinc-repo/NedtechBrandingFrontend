@@ -3,7 +3,7 @@ import React from 'react';
 
 import IntegrationCard from './IntegrationCard'
 
-const PricingSection = ({ theme = 'dark' }) => {
+const PricingSection = ({ theme = 'light' }) => {
   // --- THEME CONFIGURATION ---
   const isDark = theme === 'dark';
 

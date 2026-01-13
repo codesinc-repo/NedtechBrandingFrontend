@@ -88,4 +88,4 @@ const StatsSection = () => {
   );
 };
 
-export default StatsSection;x
+export default StatsSection;

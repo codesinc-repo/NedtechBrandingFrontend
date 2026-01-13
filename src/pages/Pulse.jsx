@@ -19,7 +19,7 @@ const PulsePage = () => {
     {
       id: "automation",
       title: "Automation",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      description: "Pulse handles the repetitive workflows that steal your time. It’s the quiet heartbeat behind your operations, delivering reliable, always-on automation that clears the decks so you can get on with growing the business. Perfect for: early-stage teams, solo operators, and SMEs who want instant leverage without complexity.",
       imageSrc: imgAutomation,
       imageOnLeft: true,
       // Yahan linkUrl add kiya taaki click karne par ye bhi kahin jaye
@@ -89,7 +89,7 @@ const PulsePage = () => {
       
       <PageHero
         title="Pulse"
-        subtitle="Lorem ipsum dolor sit amet..."
+        subtitle="Get your business moving, without lifting a finger.  Automation that works while you work."
         buttonText="Start your free trial"
         onButtonClick={() => console.log("Start Trial Clicked")}
       />

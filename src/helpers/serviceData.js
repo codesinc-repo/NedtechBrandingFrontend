@@ -12,7 +12,7 @@ export const servicesData = {
   flux: {
     name: "Flux", 
     title: "Flux (Social media)", 
-    heroSubtitle: "Your always-on creative engine.", 
+    heroSubtitle: "Flux designs, schedules, and posts content that grows your audience and keeps your brand active across social channels, without the grind. It adapts to trends, learns your tone, and makes sure you show up consistently where your customers hang out.", 
     icon: iconFlux,
     accentColor: "#EC4899", // Pink
     headline: "Your always-on creative engine.",

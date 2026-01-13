@@ -23,7 +23,7 @@ const ServicesSection = () => {
               technical expertise, and a human understanding of what makes small 
               businesses thrive.
             </p>
-            <Link to="meet">
+            <Link to="/meet">
               <button className="px-8 py-3 rounded-full border border-[#94A3B8] text-[#0F172A] font-medium text-sm hover:bg-[#0F172A] hover:text-white transition-colors duration-300">
                 Find out more
               </button>
@@ -60,7 +60,7 @@ const ServicesSection = () => {
               </div>
               <h3 className="text-white text-2xl font-normal mb-4">Pulse</h3>
               <p className="text-[#94A3B8] text-sm leading-relaxed mb-8 max-w-[280px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet ornare dolor.
+                Automate your daily workflows instantly. Pulse handles the repetitive tasks so your team can focus on what matters.
               </p>
              <Link 
                 to="/product/pulse" 
@@ -77,7 +77,7 @@ const ServicesSection = () => {
               </div>
               <h3 className="text-white text-2xl font-normal mb-4">Nexus</h3>
               <p className="text-[#94A3B8] text-sm leading-relaxed mb-8 max-w-[280px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet ornare dolor.
+                The central intelligence hub. Nexus unifies your data, documents, and tools into one searchable brain for your business.
               </p>
               <a href="#" className="text-[#2DD4BF] text-sm underline underline-offset-4 hover:text-white transition-colors">
                 Launching soon
@@ -91,7 +91,7 @@ const ServicesSection = () => {
               </div>
               <h3 className="text-white text-2xl font-normal mb-4">Horizon</h3>
               <p className="text-[#94A3B8] text-sm leading-relaxed mb-8 max-w-[280px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet ornare dolor.
+                See around corners with predictive AI. Horizon analyzes market trends to help you plot your next strategic move.
               </p>
               <a href="#" className="text-[#60A5FA] text-sm underline underline-offset-4 hover:text-white transition-colors">
                 Launching soon
@@ -103,7 +103,7 @@ const ServicesSection = () => {
       </section>
 
       {/* ==============================================
-          PART 3: CORE FEATURES (New Section - White)
+          PART 3: CORE FEATURES (White Section)
       =============================================== */}
       <section className="w-full bg-white py-24 px-6 md:px-12">
         <div className="container mx-auto max-w-6xl">

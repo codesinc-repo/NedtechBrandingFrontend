@@ -77,15 +77,31 @@ const FAQ = ({
   // Select active theme styles, fallback to light
   const currentTheme = themes[theme] || themes.light;
 
-  // Default Placeholder Data (matches your screenshot text)
+  // --- UPDATED DEFAULT DATA BASED ON IMAGE ---
   const defaultData = [
-    { question: "Lorem ipsum dolar sit amet", answer: "Detailed answer explaining the specific features and benefits goes here." },
-    { question: "Lorem ipsum dolar sit amet", answer: "Detailed answer explaining the specific features and benefits goes here." },
-    { question: "Lorem ipsum dolar sit amet", answer: "Detailed answer explaining the specific features and benefits goes here." },
-    { question: "Lorem ipsum dolar sit amet", answer: "Detailed answer explaining the specific features and benefits goes here." },
-    { question: "Lorem ipsum dolar sit amet", answer: "Detailed answer explaining the specific features and benefits goes here." },
+    { 
+      question: "What is Helm?", 
+      answer: "Helm is an AI-powered tool designed to streamline your workflow. (Add specific details here since the answer was hidden in the image)." 
+    },
+    { 
+      question: "How is Helm different from ChatGPT or other AI tools?", 
+      answer: "Unlike general AI tools, Helm is specialized for... (Add specific details here since the answer was hidden in the image)." 
+    },
+    { 
+      question: "What roles does Helm include?", 
+      answer: "Helm includes roles for developers, designers, and project managers... (Add specific details here since the answer was hidden in the image)." 
+    },
+    { 
+      question: "Who is Helm for?", 
+      answer: "Helm is built for teams looking to optimize their efficiency... (Add specific details here since the answer was hidden in the image)." 
+    },
+    { 
+      question: "Is Helm a replacement for staff?", 
+      answer: "No — Helm is built for augmentation, not replacement. It supports your existing team by removing repetitive tasks, improving throughput, and enabling smarter decisions. People stay focused on the work that matters; Helm carries the load." 
+    },
   ];
 
+  // If data prop is passed, use it; otherwise use defaultData
   const faqData = data.length > 0 ? data : defaultData;
 
   return (
@@ -128,4 +144,4 @@ const FAQ = ({
   );
 };
 
-export default FAQ;
+export default FAQ; 

@@ -10,19 +10,16 @@ import FAQ from '../components/home/Faq';
 import ProductDash from '../components/features/ProductsDash'
 export default function Services() {
   return (
-    // Note: Layout is handled globally in App.jsx now, so we don't wrap it here
     <>
-      <PageHero
-        title="Explore our services"
-        
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute."
-        
-        // Passing this prop triggers the purple button to appear
-        buttonText="Start your free trial"
-        
-        // Optional: Add logic for where the button goes
-        onButtonClick={() => console.log("Navigate to signup")} 
-      />
+    <PageHero
+  title="Explore our services"
+  
+  subtitle="Discover a suite of intelligent tools designed to automate the mundane, centralize your business knowledge, and predict your next big move. Empower your team to achieve enterprise-level growth without the enterprise budget."
+  
+  buttonText="Start your free trial"
+  
+  onButtonClick={() => console.log("Navigate to signup")} 
+/>
       <ServicesSection/>
       <ProductDash/>
       <PricingSection theme="light" />
