@@ -30,10 +30,11 @@ const FAQItem = ({ question, answer, isOpen, onClick, themeStyles }) => {
       {/* Expandable Answer Section */}
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100 mb-6' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-[500px] opacity-100 mb-6' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className={`text-base leading-relaxed max-w-2xl ${themeStyles.answerColor}`}>
+        {/* Added whitespace-pre-line to preserve line breaks/bullets in your text */}
+        <p className={`text-base leading-relaxed max-w-2xl whitespace-pre-line ${themeStyles.answerColor}`}>
           {answer}
         </p>
       </div>
@@ -57,7 +58,7 @@ const FAQ = ({
     light: {
       bg: 'bg-white',
       headingColor: 'text-slate-900',
-      borderColor: 'border-slate-300', // Slightly darker border for visibility on white
+      borderColor: 'border-slate-300',
       questionColor: 'text-slate-800',
       answerColor: 'text-slate-500',
       iconColor: 'text-slate-900',
@@ -66,7 +67,7 @@ const FAQ = ({
     dark: {
       bg: 'bg-[#020617]', // Matches your Helm project dark navy
       headingColor: 'text-white',
-      borderColor: 'border-white/10', // Subtle transparent border for dark mode
+      borderColor: 'border-white/10',
       questionColor: 'text-slate-200',
       answerColor: 'text-slate-400',
       iconColor: 'text-white',
@@ -77,27 +78,71 @@ const FAQ = ({
   // Select active theme styles, fallback to light
   const currentTheme = themes[theme] || themes.light;
 
-  // --- UPDATED DEFAULT DATA BASED ON IMAGE ---
+  // --- UPDATED DEFAULT DATA ---
   const defaultData = [
     { 
-      question: "What is Helm?", 
-      answer: "Helm is an AI-powered tool designed to streamline your workflow. (Add specific details here since the answer was hidden in the image)." 
+      question: "What is Helm, in simple terms?", 
+      answer: "Helm is an AI workforce platform designed to support growing businesses with the work that slows them down: operations, communication, content, and coordination.\n\nIt acts like a team of digital teammates that help get work done and provide clarity as you scale." 
     },
     { 
       question: "How is Helm different from ChatGPT or other AI tools?", 
-      answer: "Unlike general AI tools, Helm is specialized for... (Add specific details here since the answer was hidden in the image)." 
+      answer: "ChatGPT answers questions. Helm does the work.\n\nHelm is built around roles, workflows, and coordination, not prompts. It executes tasks, manages ongoing work, collaborates across roles, and supports decision-making, more like a team than a tool." 
     },
     { 
-      question: "What roles does Helm include?", 
-      answer: "Helm includes roles for developers, designers, and project managers... (Add specific details here since the answer was hidden in the image)." 
+      question: "Who is Helm built for?", 
+      answer: "Helm is designed for founder-led SMEs that are growing, stretched, and trying to scale without adding unnecessary headcount.\n\nIt’s particularly suited to:\n• Service-based businesses\n• Agencies and consultancies\n• SaaS and tech-enabled companies\n• Teams juggling operations, marketing, and customer success" 
     },
     { 
-      question: "Who is Helm for?", 
-      answer: "Helm is built for teams looking to optimize their efficiency... (Add specific details here since the answer was hidden in the image)." 
+      question: "Is Helm replacing people?", 
+      answer: "No.\n\nHelm is built on the principle of augmentation, not replacement. It’s designed to reduce cognitive load, handle repetitive work, and create clarity, so people can focus on higher-value thinking, relationships, and leadership." 
     },
     { 
-      question: "Is Helm a replacement for staff?", 
-      answer: "No — Helm is built for augmentation, not replacement. It supports your existing team by removing repetitive tasks, improving throughput, and enabling smarter decisions. People stay focused on the work that matters; Helm carries the load." 
+      question: "What does Helm do day to day?", 
+      answer: "Helm operates through AI roles that handle real workflows, such as:\n• Drafting and scheduling content\n• Managing email and communications\n• Supporting admin and operations\n• Handling customer interactions\n• Producing written materials\n\nOver time, these roles coordinate with each other to keep work flowing smoothly." 
+    },
+    { 
+      question: "Do I need technical knowledge to use Helm?", 
+      answer: "No. Helm is designed to feel like working with a colleague, not configuring software.\n\nDuring early access, onboarding is guided, and workflows are set up with you, not left for you to figure out alone." 
+    },
+    { 
+      question: "How quickly will we see value?", 
+      answer: "Most teams see value within the first one to two weeks, often through:\n• Reduced admin burden\n• Faster turnaround on content or communications\n• Clearer structure to recurring work\n\nHelm is designed to deliver small, tangible wins early, then expand as trust builds." 
+    },
+    { 
+      question: "Can Helm integrate with tools we already use?", 
+      answer: "Helm is being built to fit alongside existing tools rather than replace everything at once.\n\nEarly access focuses on core workflows first, with integrations expanding over time." 
+    },
+    { 
+      question: "Is there a free trial?", 
+      answer: "We’re currently running a limited Founding 50 Early Access Programme, which provides hands-on access and collaboration as Helm is built.\n\nGeneral trials will be available after launch." 
+    },
+    { 
+      question: "What if Helm isn’t right for us?", 
+      answer: "There’s no long-term lock-in.\n\nIf Helm doesn’t deliver meaningful value, you’re free to step away, no pressure, no awkwardness." 
+    },
+    { 
+      question: "Is our data secure?", 
+      answer: "Yes. Data security is a core design principle.\n\nHelm uses modern authentication, secure infrastructure, and controlled access to ensure your information is protected." 
+    },
+    { 
+      question: "Do you train AI models on our data?", 
+      answer: "No.\n\nYour data is not used to train public or third-party models." 
+    },
+    { 
+      question: "Where is data stored?", 
+      answer: "Helm is built using secure cloud infrastructure with data handling aligned to UK and EU standards." 
+    },
+    { 
+      question: "What is the Helm Founding 50?", 
+      answer: "The Founding 50 is a small group of founder-led businesses getting early access to Helm and helping shape how it evolves.\n\nIt’s a partnership, not a typical beta." 
+    },
+    { 
+      question: "How many spots are available?", 
+      answer: "There are 50 places only, and they’re intentionally limited so we can work closely with each business." 
+    },
+    { 
+      question: "What happens after the early access period?", 
+      answer: "Founding members receive:\n• A discounted founding rate\n• Priority access to new capabilities\n• Ongoing recognition as early contributors to Helm\n\nThere’s no obligation to continue if it’s not right for you." 
     },
   ];
 
@@ -144,4 +189,4 @@ const FAQ = ({
   );
 };
 
-export default FAQ; 
+export default FAQ;

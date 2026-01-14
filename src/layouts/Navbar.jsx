@@ -62,7 +62,7 @@ const Navbar = () => {
     { name: 'Pricing', path: '/pricing', type: 'link' },
     { name: 'Resources', path: '/resources', type: 'link' },
     { name: 'Contact', path: '/contact', type: 'link' },
-    { name: 'Login', path: '/login', type: 'link', className: 'ml-4' },
+    { name: 'Login', path: 'http://localhost:3001/login?theme=new'  },
     { name: 'Start free trial', path: '/signup', type: 'link' },
   ];
 
